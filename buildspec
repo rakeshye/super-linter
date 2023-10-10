@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  pre_build:
+    steps:
+      - name: Lint Code Base
+        uses: super-linter/super-linter@v5
+        env:
+          VALIDATE_ALL_CODEBASE: 'true'
+          DEFAULT_BRANCH: main
+  build:
+    commands:
+      - echo "Do something else..."
